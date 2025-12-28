@@ -1,0 +1,22 @@
+name: DevOps Demo Pipeline
+
+on:
+  push:
+    branches: [ main ] # Kích hoạt khi có code mới đẩy lên nhánh main
+
+jobs:
+  check-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      - name: Install Dependencies
+        run: npm install
+        
+      - name: Run CI Test
+        run: npm test # Hệ thống sẽ tự động chạy test.js ở đây
