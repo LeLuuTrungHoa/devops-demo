@@ -15,4 +15,5 @@ COPY . .
 EXPOSE 3000
 
 # Lệnh chạy ứng dụng
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
+CMD ["node", "index.js"]
