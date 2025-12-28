@@ -3,7 +3,7 @@ const assert = require('assert');
 
 try {
     console.log("Đang bắt đầu chạy Unit Test...");
-    const message = "Hello DevOps";
+    const message = 12345;
     assert.strictEqual(typeof message, 'string');
     
     console.log("✅ Tất cả các bài Test đã vượt qua!");
